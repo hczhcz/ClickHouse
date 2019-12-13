@@ -137,11 +137,10 @@ struct IntegerRoundingComputation
                             x = -x;
                         T quotient = x / (scale / 2);
                         T remainder = x % (scale / 2);
-                        if (remainder) {
+                        if (remainder)
                             x = (quotient + 1) / 2 * scale;
-                        } else {
+                        else
                             x = ((quotient + 1) / 4 + (quotient + 2) / 4) * scale;
-                        }
                         if (negative)
                             x = -x;
                         return x;
